@@ -45,4 +45,7 @@ public class LaptopService {
     }
 
 
+    public List<Laptop> getByQuality() {
+        return laptopRepository.findByQuality("Superb");
+    }
 }

@@ -35,6 +35,10 @@ public class LaptopController {
         return laptopService.deleteById(id);
     }
 
+    @GetMapping("/quality/{quality}")
+    public  List<Laptop> findByQuality(@PathVariable Laptop laptop){
+        return laptopService.getByQuality();
+    }
 
 
 }
