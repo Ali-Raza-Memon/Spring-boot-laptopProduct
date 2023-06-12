@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Data
@@ -14,6 +15,8 @@ import org.springframework.stereotype.Service;
 @ToString
 @Service
 public class LaptopService {
+
+    @Autowired
     public LaptopRepository laptopRepository;
 
 
