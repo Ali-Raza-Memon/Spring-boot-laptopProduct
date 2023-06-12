@@ -9,6 +9,8 @@ import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +24,10 @@ public class LaptopService {
 
     public Laptop saveLaptop(Laptop laptop){
         return laptopRepository.save(laptop);
+    }
+
+    public List<Laptop> getLaptops(){
+        return laptopRepository.findAll();
     }
 
 
