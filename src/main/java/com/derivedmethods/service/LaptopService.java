@@ -30,5 +30,13 @@ public class LaptopService {
         return laptopRepository.findAll();
     }
 
+    public Laptop updateLaptop(Laptop laptop){
+        Laptop existingLaptop = laptopRepository.findById(laptop.getId()).orElse(null);
+                existingLaptop.setColor(laptop.getColor());
+                existingLaptop.setSize(laptop.getSize());
+                existingLaptop.setQuality(laptop.getQuality());
+                existingLaptop.setQuantity(laptop.getQuantity());
+                return laptopRepository.save(existingLaptop);
+    }
 
 }

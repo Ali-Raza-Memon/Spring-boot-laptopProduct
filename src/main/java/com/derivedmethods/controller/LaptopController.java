@@ -3,10 +3,7 @@ package com.derivedmethods.controller;
 import com.derivedmethods.model.Laptop;
 import com.derivedmethods.service.LaptopService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,13 @@ public class LaptopController {
     public Laptop addLaptop(@RequestBody Laptop laptop){
         return laptopService.saveLaptop(laptop);
     }
+
+
+    @PutMapping("/update")
+    public Laptop updateLaptop(@RequestBody Laptop laptop){
+        return laptopService.updateLaptop(laptop);
+    }
+
 
 
 
