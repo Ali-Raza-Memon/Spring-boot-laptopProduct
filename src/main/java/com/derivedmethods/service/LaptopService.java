@@ -45,7 +45,7 @@ public class LaptopService {
     }
 
 
-    public List<Laptop> getByQuality() {
-        return laptopRepository.findByQuality("Superb");
+    public List<Laptop> getByQuality(String quality) {
+        return laptopRepository.findByQuality(quality);
     }
 }

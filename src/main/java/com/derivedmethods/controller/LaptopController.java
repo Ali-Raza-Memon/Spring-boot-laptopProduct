@@ -36,8 +36,8 @@ public class LaptopController {
     }
 
     @GetMapping("/quality/{quality}")
-    public  List<Laptop> findByQuality(@PathVariable Laptop laptop){
-        return laptopService.getByQuality();
+    public  List<Laptop> findByQuality(@PathVariable String quality){
+        return laptopService.getByQuality(quality);
     }
 
 
