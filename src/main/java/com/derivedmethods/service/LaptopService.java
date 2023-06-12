@@ -39,4 +39,10 @@ public class LaptopService {
                 return laptopRepository.save(existingLaptop);
     }
 
+    public String deleteById(int id) {
+        laptopRepository.deleteById(id);
+        return "removed laptop"+id;
+    }
+
+
 }

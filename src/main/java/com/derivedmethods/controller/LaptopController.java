@@ -30,6 +30,11 @@ public class LaptopController {
     }
 
 
+    @DeleteMapping("/delete/{id}")
+    public String deleteById(@PathVariable int id){
+        return laptopService.deleteById(id);
+    }
+
 
 
 }
