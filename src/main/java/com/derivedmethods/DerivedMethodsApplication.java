@@ -1,7 +1,11 @@
 package com.derivedmethods;
 
+import com.derivedmethods.model.Laptop;
+import com.derivedmethods.repository.LaptopRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.List;
 
 @SpringBootApplication
 public class DerivedMethodsApplication {
@@ -10,4 +14,9 @@ public class DerivedMethodsApplication {
 		SpringApplication.run(DerivedMethodsApplication.class, args);
 	}
 
-}
+	List<Laptop> laptopByQuality = LaptopRepository.getLaptopByQuality("Superb");
+	laptopByQuality.forEach(e->{
+		System.out.println(e);
+
+	});
+})
